@@ -82,7 +82,7 @@ $logitech->setMP('2 juta');
 $logitech->setType('wireles');
 $logitech->cetak();
 
-class mosse{
+class mouse{
 
 	var $merk;
 	var $harga;
@@ -103,7 +103,7 @@ class mosse{
 		echo 'warna:'.$this->warna;
 	}
 }
-$komputer=new mosse();
+$komputer=new mouse();
 $komputer->setmerk('lg');
 $komputer->setharga('2000');
 $komputer->setwarna('putih');
