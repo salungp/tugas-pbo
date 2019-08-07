@@ -36,7 +36,7 @@ class keyboard
 			$this->harga = 'Default';
 		} else 
 		{
-			$this->harga = '<b>'.ucfirst($value).'</b>';
+			$this->harga = '<b>Rp.'.ucfirst($value).'</b>';
 		}
 	}
 
@@ -82,4 +82,29 @@ $logitech->setMP('2 juta');
 $logitech->setType('wireles');
 $logitech->cetak();
 
-echo 'Hello, world!';
+class mosse{
+
+	var $merk;
+	var $harga;
+	var $warna;
+
+	public function setmerk($merk=''){
+		$this->merk=$merk;
+	}
+	public function setharga($harga=''){
+		$this->harga=$harga;
+	}
+	public function setwarna($warna=''){
+		$this->warna=$warna;
+	}
+	public function cetak(){
+		echo 'merk:'.$this->merk;
+		echo 'harga:'.$this->harga;
+		echo 'warna:'.$this->warna;
+	}
+}
+$komputer=new mosse();
+$komputer->setmerk('lg');
+$komputer->setharga('2000');
+$komputer->setwarna('putih');
+$komputer-> cetak ();
