@@ -36,7 +36,7 @@ class keyboard
 			$this->harga = 'Default';
 		} else 
 		{
-			$this->harga = '<b>Rp.'.ucfirst($value).'</b>';
+			$this->harga = '<b>Rp.'.$value.'</b>';
 		}
 	}
 
@@ -64,12 +64,12 @@ class keyboard
 
 	public function cetak()
 	{
-		echo '<h2>Spesifikasi Laptop</h1>'.
+		echo '<h2>Keyboard</h1>'.
 			 'Merk : '.$this->merk.'<br>'.
 			 'Warna : '.$this->warna.'<br>'.
 			 'Harga : '.$this->harga.'<br>'.
 			 'Maximal ketik : '.$this->max_press.'<br>'.
-			 'Type : '.$this->type.'<br>';
+			 'Type : '.$this->type.'<br><br>';
 
 	}
 }
@@ -108,3 +108,53 @@ $komputer->setmerk('lg');
 $komputer->setharga('2000');
 $komputer->setwarna('putih');
 $komputer-> cetak ();
+
+
+class flashdisk
+{
+	public $merk;
+	public $harga;
+	public $warna;
+	public $sinyal;
+
+	public function setMerk($value = null)
+	{
+		$this->merk = $value;
+	}
+
+	public function setHarga($value = null)
+	{
+		if (is_int($value))
+		{
+			$this->harga = $value;
+		} else {
+			$this->harga = intval($value);
+		}
+	}
+
+	public function setWarna($value)
+	{
+		$this->warna = $value;
+	}
+
+	public function setSinyal($value)
+	{
+		$this->sinyal = $value;
+	}
+
+	public function cetak()
+	{
+		echo '<h2>Flashdisk</h2>'.
+			 'Merk : '.$this->merk.'<br>'.
+			 'Harga : Rp.'.$this->harga.'<br>'.
+			 'Warna : '.$this->warna.'<br>'.
+			 'Sinyal : '.$this->sinyal.'<br>';
+	}
+}
+
+$flashdisk = new flashdisk();
+$flashdisk->setMerk('smartfren');
+$flashdisk->setHarga(400000);
+$flashdisk->setWarna('hitam');
+$flashdisk->setSinyal('4G');
+$flashdisk->cetak();
