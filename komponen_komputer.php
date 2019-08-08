@@ -158,3 +158,47 @@ $flashdisk->setHarga(400000);
 $flashdisk->setWarna('hitam');
 $flashdisk->setSinyal('4G');
 $flashdisk->cetak();
+
+class monitor
+{
+	var $merk;
+	var $ukuran;
+	var $harga;
+	var $berat;
+
+	public function setMerk($merk='')
+	{
+		$this->merk=$merk;
+	}
+
+	public function setUkuran($ukuran='')
+	{
+		$this->ukuran=$ukuran;
+	}
+
+	public function setHarga($harga='')
+	{
+		$this->harga=$harga;
+	}
+
+	public function setBerat($berat='')
+	{
+		$this->berat=$berat;
+	}
+
+	public function cetak()
+	{
+		echo 'Monitor';
+		echo 'Merk :'.$this->merk;
+		echo 'Ukuran : '.$this->ukuran;
+		echo 'Harga : '.$this->harga;
+		echo 'Berat : '.$this->berat;
+	}
+}
+
+$monitor=new monitor();
+$monitor->setMerk('LG');
+$monitor->setUkuran('400 Inc');
+$monitor->setHarga(4000000);
+$monitor->setBerat('2 KG');
+$monitor->cetak();
