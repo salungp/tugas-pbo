@@ -202,3 +202,39 @@ $monitor->setUkuran('400 Inc');
 $monitor->setHarga(4000000);
 $monitor->setBerat('2 KG');
 $monitor->cetak();
+
+class CPU
+{
+	public $type;
+	public $merk;
+	public $harga;
+
+	public function setMerk($value = null)
+	{
+		$this->merk = $value;
+	}
+
+	public function setType($value = null)
+	{
+		$this->type = $value;
+	}
+
+	public function setHarga($value = null)
+	{
+		$this->harga = $value;
+	}
+
+	public function cetak()
+	{
+		echo '<h2>CPU</h2>'.
+			 'Merk : '.$this->merk.'<br>'.
+			 'Type : '.$this->type.'<br>'.
+			 'Harga : '.$this->harga.'<br>';
+	}
+}
+
+$cpu = new CPU();
+$cpu->setMerk('intel');
+$cpu->setHarga(20000000);
+$cpu->setType('i7');
+$cpu->cetak();
